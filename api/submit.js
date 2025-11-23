@@ -4,7 +4,6 @@ export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email, password } = req.body;
     
-    // Получаем IP и другую информацию
     const clientIP = req.headers['x-forwarded-for'] || 
                      req.connection.remoteAddress ||
                      'Неизвестно';
